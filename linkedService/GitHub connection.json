@@ -4,7 +4,7 @@
 		"annotations": [],
 		"type": "HttpServer",
 		"typeProperties": {
-			"url": "https://raw.githubusercontent.com/MandeepBharti/AdventureWorks_Analysis",
+			"url": "https://raw.githubusercontent.com/MandeepBharti/AdventureWorks_Analysis/",
 			"enableServerCertificateValidation": true,
 			"authenticationType": "Anonymous"
 		}
