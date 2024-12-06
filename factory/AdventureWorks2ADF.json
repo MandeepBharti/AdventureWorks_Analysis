@@ -1,0 +1,9 @@
+{
+	"name": "AdventureWorks2ADF",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b67999a7-6227-4876-97f5-089c151033c6",
+		"tenantId": "1e55f2bf-59b3-4cea-962d-98b694009f0a"
+	}
+}
