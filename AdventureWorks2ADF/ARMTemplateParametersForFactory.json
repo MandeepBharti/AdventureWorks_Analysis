@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "AdventureWorks2ADF"
+		},
+		"DataLake_Connection_accountKey": {
+			"value": ""
+		},
+		"DataLake_Connection_properties_typeProperties_url": {
+			"value": "https://adventureworks2storage.dfs.core.windows.net/"
+		},
+		"GitHub connection_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/MandeepBharti/AdventureWorks_Analysis/"
+		}
+	}
+}
