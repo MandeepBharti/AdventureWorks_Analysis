@@ -1,0 +1,39 @@
+{
+	"name": "DataLake_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "DataLake_Connection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "String"
+			},
+			"file_extension": {
+				"type": "String",
+				"defaultValue": ".csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@concat(dataset().filename,dataset().file_extension)",
+					"type": "Expression"
+				},
+				"folderPath": {
+					"value": "@concat('Data/',dataset().filename)",
+					"type": "Expression"
+				},
+				"fileSystem": "stage"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}

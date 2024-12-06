@@ -1,0 +1,38 @@
+{
+	"name": "Github_Dataset",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "GitHub connection",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"filename": {
+				"type": "String"
+			},
+			"relative_path": {
+				"type": "String",
+				"defaultValue": "refs/heads/main/Dataset/"
+			},
+			"file_extension": {
+				"type": "String",
+				"defaultValue": ".csv"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@concat(dataset().relative_path,dataset().filename,dataset().file_extension)",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
